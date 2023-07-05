@@ -14,6 +14,7 @@ const randomBtn = $('.btn-random');
 const repeatBtn = $('.btn-repeat');
 const activeSong = $('.song');
 const playlist = $('.playlist');
+const cdInner = $('.cd-inner')
 
 const PLAYER_STORAGE_KEY = 'F8_PLAYER'
 
@@ -85,6 +86,9 @@ const app = {
                 </div>
                 <div class="option">
                   <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                  <div></div>
                 </div>
               </div>
           `
@@ -175,6 +179,9 @@ const app = {
       _this.isPlaying = true;
       player.classList.add('playing');
       cdthumbAnimate.play();
+      cdInner.classList.add('active')
+      $('.song.active .spectrum').classList.remove('paused')
+      $('.song.active .spectrum').classList.add('active')
     }
 
     //Xử lý song bị pause
@@ -182,6 +189,9 @@ const app = {
       _this.isPlaying = false;
       player.classList.remove('playing');
       cdthumbAnimate.pause();
+      cdInner.classList.remove('active')
+      $('.song.active .spectrum').classList.remove('active')
+      $('.song.active .spectrum').classList.add('paused')
     }
 
     //Khi tiến độ bài hát thay đổi 
