@@ -199,11 +199,11 @@ const app = {
     }
 
     // Xử lý cd quay / dừng 
-    const cdthumbAnimate = cdThumb.animate([
+    var cdthumbAnimate = cdThumb.animate([
       { transform: 'rotate(360deg)'}
     ], {
         duration: 10000, // 10 seconds
-        interation: Infinity,  // vô hạn
+        iterations: Infinity  // vô hạn
     })
     cdthumbAnimate.pause();
     
