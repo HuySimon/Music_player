@@ -23,7 +23,7 @@ const app = {
     {
       name: "Cá Lớn (大魚)",
       singer: "Châu Thâm (Zhou Shen)",
-      path: "/songs/CaLon-ChauThamZhouShen-5299966.mp3",
+      path: "./songs/CaLon-ChauThamZhouShen-5299966.mp3",
       image:
         "./imgs/images.jpg"
     },
